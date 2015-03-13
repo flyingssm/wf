@@ -1,0 +1,59 @@
+{extends file='common/template.smarty'}
+{block name=head}{/block}
+{block name=body}
+<div class='container'>
+
+	<h3 class='page-header'>闘技場</h3>
+	<div class='col-md-6'>
+		<div class="thumbnail pet-room" >
+			<div class='pet-entity text-center'>
+<h5>自分</h5><h4>{$mypet['life']['name_jp']}</h4>
+				<img src="/imgs/{$mypet['life']['img_src']}" alt="..." class="img-thumbnail" style="height:200px;">
+				<div class="caption">
+				<p class='pet-status-lv'>Lv.{$mypet['pet']['level']}</p>
+				<p class='pet-status-strength'>強さ : {$mypet['pet']['strength']}</p>
+				<p class='pet-status-inteligence'>賢さ : {$mypet['pet']['inteligence']}</p>
+				<p class='pet-status-fertility'>繁殖力 : {$mypet['pet']['fertility']}</p>
+				<p class='pet-status-lifespan'>寿命 : {$mypet['pet']['lifespan']}</p>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<div class='col-md-6'>
+
+		<div class="thumbnail pet-room" >
+			<div class='pet-entity text-center'>
+<h5>相手</h5><h4>{$enemypet['life']['name_jp']}</h4>
+				<img src="/imgs/{$enemypet['life']['img_src']}" alt="..." class="img-thumbnail" style="height:200px;">
+				<div class="caption">
+				<p class='pet-status-lv'>Lv.{$enemypet['pet']['level']}</p>
+				<p class='pet-status-strength'>強さ : {$enemypet['pet']['strength']}</p>
+				<p class='pet-status-inteligence'>賢さ : {$enemypet['pet']['inteligence']}</p>
+				<p class='pet-status-fertility'>繁殖力 : {$enemypet['pet']['fertility']}</p>
+				<p class='pet-status-lifespan'>寿命 : {$enemypet['pet']['lifespan']}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class='col-md-12'>
+		<hr>
+		<div class='battle-log'>
+			{foreach $battle_log as $line}
+			<p class="{$line['type']}">{$line['text']}</p>
+			{/foreach}
+
+
+		</div>
+
+	</div>
+	<div class='col-md-12'>
+		<hr>
+		<a href = '/arena' class='btn btn-default'>闘技場トップへ戻る</a>
+
+	</div>
+</div>
+{/block}

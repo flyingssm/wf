@@ -1,0 +1,26 @@
+{extends file='common/template.smarty'}
+{block name=head}{/block}
+{block name=body}
+<div class='container'>
+
+	<form action="/profile" method="post" id='editProfileForm'>
+		<div class="form-horizontal">
+			<h3>プロフィール編集</h3>
+			<hr />
+			<div class="col-md-12">
+				<div class="form-group">
+					<div class="col-md-12">
+						<label class="control-label" for="name">名前</label>
+						<input class="form-control "  name= "name" type="text" value={$user_data['screen_name']} class='name'>
+					</div>
+				</div>
+				<div class="col-md-12">
+					<div class="form-group">
+					<button type="submit" class="btn btn-default pull-right">変更</button>
+
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+{/block}

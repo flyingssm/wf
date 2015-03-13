@@ -1,0 +1,15 @@
+{extends file='common/template.smarty'}
+
+{block name=head}{/block}
+
+
+
+{block name=body}
+
+<foreach $random_lifes as $life>
+</foreach>
+
+
+
+{/block}
+

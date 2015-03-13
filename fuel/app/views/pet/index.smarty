@@ -1,0 +1,36 @@
+{extends file='common/template.smarty'}
+{block name=head}{/block}
+{block name=body}
+<div class='container'>
+	<h3 class='page-header'>ペット</h3>
+	{$is=[1,2,3]}
+	{foreach $is as $i}
+	<div class='col-md-4'>
+		<div class="thumbnail pet-room my-pet" data-userid={if $user_data }{$user_data['user_id'] }{/if} data-roomno={$i}>
+			<div class='pet-empty'>
+				<h4 style="height : 30px;">ペットの部屋{$i}</h4>
+				<div class="caption">まだペットを飼っていません。
+				</div>
+				<div class='text-center'>
+				<button class='btn btn-success generate-pet-button' data-room-no='{$i}'>新しくペットを飼う</button>
+				</div>
+			</div>
+			<div class='pet-entity hide text-center'>
+				<h4 style="height : 30px;"><small><br>　</small></h4>
+				<img src="" alt="..." class="img-thumbnail" style="height:200px;">
+				<div class="caption">
+				<p class='pet-status-lv'></p>
+				<p class='pet-status-strength'></p>
+				<p class='pet-status-inteligence'></p>
+				<p class='pet-status-fertility'></p>
+				<p class='pet-status-lifespan'></p>
+				</div>
+								<div class='text-center'>
+				<button class='btn btn-danger release-pet-button' data-room-no='{$i}'>ペットを逃がす</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	{/foreach}
+</div>
+{/block}

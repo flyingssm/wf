@@ -1,0 +1,24 @@
+{extends file='common/template.smarty'}
+
+{block name=head}{/block}
+
+{block name=body}
+<div class='container'>
+
+	<div class='col-md12'>
+  <h3 class='page-header'>図鑑</h3>
+
+		{foreach $ranking_lifes as $life}
+		{if $life['img_url']}
+		{include  file='common/life_card1.smarty'}
+		{/if}
+		{/foreach}
+		<div class='row '>
+		<div class='col-md-12 text-center '>
+		{Pagination::instance('lifes')}
+		</div>
+		</div>
+	</div>
+
+</div>
+{/block}

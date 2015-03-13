@@ -1,0 +1,11 @@
+{
+	"type": "jdbc",
+	"jdbc": {
+		"url": "jdbc:mysql://127.0.0.1:3306/wf”, 
+		"user": "root",
+		"password": "",
+		"sql ": "select * from biological_encyclopedia",
+		"index": "lifes",
+		"type": "biological_encyclopedia" 
+	}
+}

@@ -1,0 +1,7 @@
+{extends file='common/template.smarty'}
+{block name=head}{/block}
+{block name=body}
+<div class='container'>
+  <p>かけません</p>
+</div>
+{/block}

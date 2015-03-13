@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja-jp" xml:lang="ja-jp">
+	<head>
+		{Asset::css('bootstrap.css')}
+		{Asset::css('style.css')}
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		{Asset::js('wf.js')}
+		{block name=head}{/block}
+	</head>
+	<body>
+		{include file='common/topnav.smarty'}
+		{block name=body}{/block}
+		<div id='alertBox'>
+		</div>
+		{include file='common/message_receptor.smarty'}
+		{Asset::js('bootstrap.js')}
+	</body>
+</html>

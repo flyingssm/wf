@@ -1,0 +1,10 @@
+
+  <div class="col-sm-6">
+    <div class="thumbnail">
+
+  <h4 style='height : 30px;'>{$life['name_jp']}<small><br>{$life['name_en']}　</small></h4>
+      <img src="/imgs/{$life['img_src']}" alt="..." class="img-thumbnail" style='height:200px;'>
+      <div class="caption">
+		</div>
+    </div>
+  </div>

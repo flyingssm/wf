@@ -1,0 +1,20 @@
+{extends file='common/template.smarty'}
+{block name=head}{/block}
+{block name=body}
+<div class='container'>
+	<h3 class='page-header'>闘技場</h3>
+	<form action='/arena/result' method = 'GET'>
+		<div class='col-md-12'>
+		<select class="form-control" name='room_no'>
+
+		{foreach $mypets as $pet}
+			<option value ="{$pet['pet']['room_no']}" >{$pet['life']['name_jp']} (Lv.{$pet['pet']['level']})</option>
+		{/foreach}
+</select>
+	</div>
+	<div class='col-md-12'>
+		<button class='btn btn-info'>ランダム対戦</button>
+	</div>
+	</form>
+</div>
+{/block}

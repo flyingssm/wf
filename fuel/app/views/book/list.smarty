@@ -1,0 +1,23 @@
+{extends file='common/template.smarty'}
+{block name=head}{/block}
+{block name=body}
+<div class='container'>
+	<h3 class='page-header'>図鑑</h3>
+	<h4>全 {Pagination::instance('lifes')->total_items} 件<small>  {Pagination::instance('lifes')->per_page}/{Pagination::instance('lifes')->total_pages}ページ</small></h4>
+
+	<div class='col-md-9'>
+		{foreach $lifes as $life}
+		{if $life['img_url']}
+		{include  file='common/life_card1.smarty'}
+		{/if}
+		{/foreach}
+		<div class='row '>
+		<div class='col-md-12 text-center '>
+		{Pagination::instance('lifes')}
+		</div>
+		</div>
+	</div>
+			<div class='col-md-3'><a href='/book/write' class='btn btn-info'>生物ページを書く</a>
+		</div>
+</div>
+{/block}

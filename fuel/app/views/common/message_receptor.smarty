@@ -1,0 +1,7 @@
+<div id='messageReceptor' class='hide'>
+{if isset($msgs)}
+{foreach $msgs as $msg}
+<span class='hide' data-status="{$msg['status']}" data-text="{$msg['text']}">
+{/foreach}
+{/if}
+<div>
